@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/layout_ItemOnlineUser"
+    android:layout_marginRight="8dp"
+    android:orientation="vertical"
+    tools:ignore="Deprecated">
+
+    <LinearLayout
+        android:layout_width="71dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="18dp"
+        android:background="@drawable/chat_bg_border_radius_8dp"
+        android:orientation="vertical"
+        android:padding="8dp">
+
+        <TextView
+            android:id="@+id/tvOnlineUser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="4dp"
+            android:fontFamily="@font/public_sans_semi_bold"
+            android:text="Nguyễn"
+            android:textAlignment="center"
+            android:textSize="13sp"
+            tools:ignore="RtlCompat" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/llStatusAvatar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/civImage"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/cute1" />
+
+        <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/civOnlineCircle"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_below="@id/civImage"
+            android:layout_marginLeft="-12dp"
+            android:layout_marginTop="-10dp"
+            android:layout_toEndOf="@id/civImage"
+            android:src="@color/green_circle"
+            app:civ_border_color="@color/white"
+            app:civ_border_width="1dp" />
+    </RelativeLayout>
+</RelativeLayout>

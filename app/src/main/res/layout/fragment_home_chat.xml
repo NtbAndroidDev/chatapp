@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.ChatHomeFragment"
+    android:background="@color/primary_background"
+    android:orientation="vertical"
+    android:id="@+id/llHomeChats"
+    android:clickable="true"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingHorizontal="24dp"
+        android:paddingTop="24dp"
+        android:layout_marginBottom="16dp">
+        <TextView
+            android:id="@+id/c_tvChats"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Chats"
+            android:textColor="@color/primary_text"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="24dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:orientation="horizontal"
+            android:id="@+id/searchBtn"
+            android:background="@drawable/chat_bg_border_radius_8dp"
+            android:gravity="center_vertical"
+            android:paddingHorizontal="16dp"
+            >
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_search_line"
+                android:layout_marginRight="16dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:fontFamily="@font/public_sans_regular"
+                android:textColor="@color/secondary_text"
+                android:text="Search users by name or email"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/c_rcvOnlineUser"
+        android:layout_marginStart="-6dp"
+        android:layout_marginEnd="-6dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="24dp"
+        android:paddingBottom="24dp"
+        android:orientation="horizontal"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+    <TextView
+        android:id="@+id/c_tvRecent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Recent"
+        android:textColor="@color/primary_text"
+        android:fontFamily="@font/public_sans_semi_bold"
+        android:paddingHorizontal="24dp"
+        android:layout_marginBottom="16dp"
+        android:textSize="16sp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/c_rcvChatUser"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="8dp" />
+</LinearLayout>
